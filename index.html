@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temukan Mobil Impian Anda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="images/hyundai-icon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/hyundai-logo.png" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="produkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Produk
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="produkDropdown">
+                            <li><a class="dropdown-item" href="ioniq5n.html">IONIQ 5 N</a></li>
+                            <li><a class="dropdown-item" href="tucson.html">Tucson</a></li>
+                            <li><a class="dropdown-item" href="kona.html">Kona</a></li>
+                            <li><a class="dropdown-item" href="ioniq6.html">Ioniq 6</a></li>
+                            <li><a class="dropdown-item" href="stargazerx.html">Stargazer X</a></li>
+                            <li><a class="dropdown-item" href="stargazer.html">Stargazer</a></li>
+                            <li><a class="dropdown-item" href="ioniq5.html">Ioniq 5</a></li>
+                            <li><a class="dropdown-item" href="creta.html">Creta</a></li>
+                            <li><a class="dropdown-item" href="staria.html">Staria</a></li>
+                            <li><a class="dropdown-item" href="santafe.html">Santa Fe</a></li>
+                            <li><a class="dropdown-item" href="palisade.html">Palisade</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="simulasi.html">Simulasi Kredit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="harga.html">Daftar Harga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Hubungi Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/hero-1.jpg" class="d-block w-100" alt="Mobil Mewah">
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold">Temukan Mobil Impian Anda</h1>
+                        <p class="lead">Temukan kendaraan premium dengan kualitas dan performa yang luar biasa</p>
+                        <a href="produk.html" class="btn btn-primary btn-lg">Jelajahi Kendaraan</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hero-2.jpg" class="d-block w-100" alt="Showroom Mobil">
+                    <div class="carousel-caption">
+                        <h1 class="display-4 fw-bold">Pengalaman Showroom Premium</h1>
+                        <p class="lead">Kunjungi showroom modern kami untuk pengalaman membeli mobil yang terbaik</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">Buat Janji Temu</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-car fa-3x text-primary mb-3"></i>
+                        <h4>Pilihan Luas</h4>
+                        <p>Pilih dari inventaris kendaraan premium kami yang lengkap</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h4>Kualitas Terjamin</h4>
+                        <p>Semua kendaraan kami menjalani pemeriksaan kualitas yang ketat</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                        <h4>Layanan Ahli</h4>
+                        <p>Tim profesional siap membantu Anda selama proses pembelian</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Penawaran Khusus Section -->
+    <section id="promo" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Penawaran Khusus</h2>
+                    <p class="lead text-muted">Dapatkan promo menarik untuk pembelian mobil Hyundai</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card promo-card h-100">
+                        <img src="images/promo-1.jpg" class="card-img-top" alt="Promo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Promo DP Ringan</h5>
+                            <p class="card-text">Nikmati kemudahan memiliki mobil Hyundai dengan DP ringan dan cicilan terjangkau.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card promo-card h-100">
+                        <img src="images/promo-2.jpg" class="card-img-top" alt="Promo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Voucher Service Gratis</h5>
+                            <p class="card-text">Dapatkan voucher service gratis untuk setiap pembelian mobil Hyundai selama periode promo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Produk Kami Section -->
+    <section id="produk" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Produk Kami</h2>
+                    <p class="lead text-muted">Temukan kendaraan premium terbaru kami</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- IONIQ 5 N -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="ioniq5n.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/ioniq5.jpg" class="card-img-top" alt="IONIQ 5 N">
+                            <div class="card-body">
+                                <h5 class="card-title">IONIQ 5 N</h5>
+                                <p class="card-text">Varian performa tinggi dari IONIQ 5 dengan tenaga listrik maksimal dan fitur balap.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Tucson -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="tucson.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/hero-1.jpg" class="card-img-top" alt="Tucson">
+                            <div class="card-body">
+                                <h5 class="card-title">Tucson</h5>
+                                <p class="card-text">SUV modern dengan desain dinamis, fitur canggih, dan kenyamanan maksimal.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Kona -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="kona.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/hero-2.jpg" class="card-img-top" alt="Kona">
+                            <div class="card-body">
+                                <h5 class="card-title">Kona</h5>
+                                <p class="card-text">SUV kompak stylish, efisien, dan cocok untuk gaya hidup urban modern.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Ioniq 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="ioniq6.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/ioniq5.jpg" class="card-img-top" alt="Ioniq 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Ioniq 6</h5>
+                                <p class="card-text">Sedan listrik futuristik dengan aerodinamika tinggi dan teknologi mutakhir.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Stargazer X -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="stargazerx.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/showroom.jpg" class="card-img-top" alt="Stargazer X">
+                            <div class="card-body">
+                                <h5 class="card-title">Stargazer X</h5>
+                                <p class="card-text">MPV keluarga dengan desain sporty dan fitur hiburan lengkap.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Stargazer -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="stargazer.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/showroom.jpg" class="card-img-top" alt="Stargazer">
+                            <div class="card-body">
+                                <h5 class="card-title">Stargazer</h5>
+                                <p class="card-text">MPV modern dengan kabin luas, nyaman, dan fitur keselamatan canggih.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Ioniq 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="ioniq5.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/ioniq5.jpg" class="card-img-top" alt="IONIQ 5">
+                            <div class="card-body">
+                                <h5 class="card-title">IONIQ 5</h5>
+                                <p class="card-text">SUV listrik dengan teknologi canggih dan jarak tempuh mengesankan.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Creta -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="creta.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/creta.jpg" class="card-img-top" alt="Creta">
+                            <div class="card-body">
+                                <h5 class="card-title">Creta</h5>
+                                <p class="card-text">SUV kompak stylish, irit bahan bakar, dan fitur keselamatan modern.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Staria -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="staria.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/staria.jpg" class="card-img-top" alt="Staria">
+                            <div class="card-body">
+                                <h5 class="card-title">Staria</h5>
+                                <p class="card-text">MPV premium dengan desain futuristik dan kabin super luas.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Santa Fe -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="santafe.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/hero-1.jpg" class="card-img-top" alt="Santa Fe">
+                            <div class="card-body">
+                                <h5 class="card-title">Santa Fe</h5>
+                                <p class="card-text">SUV keluarga dengan performa tangguh dan fitur keselamatan lengkap.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Palisade -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="palisade.html" class="text-decoration-none text-dark">
+                        <div class="card vehicle-card h-100">
+                            <img src="images/showroom.jpg" class="card-img-top" alt="Palisade">
+                            <div class="card-body">
+                                <h5 class="card-title">Palisade</h5>
+                                <p class="card-text">SUV flagship Hyundai dengan kapasitas 7-8 penumpang dan fitur premium.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Dealer Kami Section -->
+    <section id="dealer" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Dealer Kami</h2>
+                    <p class="lead">Galeri Foto Dealer Hyundai Jakarta</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <img src="images/showroom.jpg" class="card-img-top" alt="Showroom Hyundai">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <img src="images/showroom.jpg" class="card-img-top bg-light p-4" alt="Hyundai Logo">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <img src="images/showroom.jpg" class="card-img-top" alt="Dealer Interior">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <img src="images/showroom.jpg" class="card-img-top" alt="Dealer Eksterior">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <img src="images/showroom.jpg" class="card-img-top" alt="Promo Dealer">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <img src="images/showroom.jpg" class="card-img-top" alt="Promo Dealer 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Hubungi Kami untuk mempelajari lebih lanjut</h5>
+                    <p>Mitra terpercaya Anda untuk kendaraan premium</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Informasi Kontak</h5>
+                    <p>
+                        <i class="fas fa-phone me-2"></i>+62 859-5917-8305<br>
+                        <i class="fas fa-envelope me-2"></i>info@premiumcarsales.com
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Hyundai | Jakarta | Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Vehicle Modals -->
+    <div class="modal fade" id="vehicleModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hyundai IONIQ 5</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/ioniq5.jpg" class="img-fluid mb-3" alt="Hyundai IONIQ 5">
+                    <h6>Spesifikasi:</h6>
+                    <ul>
+                        <li>Powertrain listrik</li>
+                        <li>Jarak tempuh 300+ mil</li>
+                        <li>Pengisian ultra-cepat</li>
+                        <li>Asisten pengemudi canggih</li>
+                    </ul>
+                    <p class="text-primary fw-bold">Harga: $45,000</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary">Jadwalkan Test Drive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vehicleModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hyundai Creta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/creta.jpg" class="img-fluid mb-3" alt="Hyundai Creta">
+                    <h6>Spesifikasi:</h6>
+                    <ul>
+                        <li>Mesin 1.5L Turbo</li>
+                        <li>7-speed DCT</li>
+                        <li>Fitur keselamatan canggih</li>
+                        <li>Interior yang luas</li>
+                    </ul>
+                    <p class="text-primary fw-bold">Harga: $28,000</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary">Jadwalkan Test Drive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="vehicleModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hyundai Staria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/staria.jpg" class="img-fluid mb-3" alt="Hyundai Staria">
+                    <h6>Spesifikasi:</h6>
+                    <ul>
+                        <li>Mesin 2.2L Diesel</li>
+                        <li>8-speed automatic</li>
+                        <li>Interior premium</li>
+                        <li>Konektivitas canggih</li>
+                    </ul>
+                    <p class="text-primary fw-bold">Harga: $35,000</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary">Jadwalkan Test Drive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/6285959178305" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
