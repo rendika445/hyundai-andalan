@@ -60,65 +60,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Credit Simulation Form
     const creditSimulationForm = document.getElementById('creditSimulation');
     if (creditSimulationForm) {
+        // Format DP input as Rupiah
+        const dpInput = document.getElementById('dp');
+        if (dpInput) {
+            dpInput.addEventListener('input', function(e) {
+                let value = this.value.replace(/[^\d]/g, '');
+                if (value) {
+                    this.value = formatRupiah(value, 'Rp ');
+                } else {
+                    this.value = '';
+                }
+            });
+        }
         creditSimulationForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const vehicleType = document.getElementById('vehicleType').value;
-            const downPayment = parseFloat(document.getElementById('downPayment').value);
-            const loanTerm = parseInt(document.getElementById('loanTerm').value);
-            const interestRate = parseFloat(document.getElementById('interestRate').value);
-            
-            if (!vehicleType || !downPayment || !loanTerm || !interestRate) {
+            // Get all field values
+            const nama = document.getElementById('nama').value;
+            const nohp = document.getElementById('nohp').value;
+            const kota = document.getElementById('kota').value;
+            const mobiltipe = document.getElementById('mobiltipe').value;
+            const tenor = document.getElementById('tenor').value;
+            const dp = document.getElementById('dp').value;
+            const rencana = document.getElementById('rencana').value;
+
+            // Validate required fields (should already be handled by HTML5, but double check)
+            if (!nama || !nohp || !kota || !mobiltipe || !tenor || !dp || !rencana) {
                 showAlert('Mohon isi semua field yang diperlukan.', 'danger');
                 return;
             }
-            
-            // Vehicle prices
-            const vehiclePrices = {
-                'ioniq5': 45000,
-                'creta': 28000,
-                'staria': 35000
-            };
-            
-            const vehiclePrice = vehiclePrices[vehicleType];
-            const loanAmount = vehiclePrice - downPayment;
-            
-            if (loanAmount <= 0) {
-                showAlert('Uang muka tidak boleh lebih besar dari harga kendaraan.', 'danger');
-                return;
-            }
-            
-            // Calculate monthly payment
-            const monthlyInterestRate = interestRate / 100 / 12;
-            const monthlyPayment = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTerm)) / 
-                                 (Math.pow(1 + monthlyInterestRate, loanTerm) - 1);
-            
-            const totalPayment = monthlyPayment * loanTerm;
-            const totalInterest = totalPayment - loanAmount;
-            
-            // Display results
-            const resultDetails = document.getElementById('resultDetails');
-            resultDetails.innerHTML = `
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><strong>Harga Kendaraan:</strong> $${vehiclePrice.toLocaleString()}</p>
-                        <p><strong>Uang Muka:</strong> $${downPayment.toLocaleString()}</p>
-                        <p><strong>Jumlah Pinjaman:</strong> $${loanAmount.toLocaleString()}</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p><strong>Cicilan Bulanan:</strong> $${monthlyPayment.toFixed(2)}</p>
-                        <p><strong>Total Pembayaran:</strong> $${totalPayment.toFixed(2)}</p>
-                        <p><strong>Total Bunga:</strong> $${totalInterest.toFixed(2)}</p>
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <p><strong>Jangka Waktu:</strong> ${loanTerm} bulan</p>
-                    <p><strong>Suku Bunga:</strong> ${interestRate}% per tahun</p>
-                </div>
-            `;
-            
-            document.getElementById('simulationResult').style.display = 'block';
-            showAlert('Simulasi kredit berhasil dihitung!', 'success');
+
+            // Compose WhatsApp message
+            const waNumber = '6285959178305';
+            const message =
+                `*Simulasi Kredit Hyundai*\n` +
+                `Nama: ${nama}\n` +
+                `No HP: ${nohp}\n` +
+                `Kota: ${kota}\n` +
+                `Mobil & Tipe: ${mobiltipe}\n` +
+                `Tenor: ${tenor} Tahun\n` +
+                `Budget DP: ${dp}\n` +
+                `Rencana Pembelian: ${rencana}`;
+
+            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
         });
     }
 
@@ -394,3 +378,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the page
     console.log('Premium Car Sales website loaded successfully!');
 }); 
+
+function formatRupiah(angka, prefix) {
+    let number_string = angka.replace(/[^\d]/g, ''),
+        split = number_string.split(','),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/g);
+    if (ribuan) {
+        let separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+    }
+    rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
+    return prefix === undefined ? rupiah : (rupiah ? prefix + rupiah : '');
+} 
