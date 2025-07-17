@@ -60,18 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Credit Simulation Form
     const creditSimulationForm = document.getElementById('creditSimulation');
     if (creditSimulationForm) {
-        // Format DP input as Rupiah
-        const dpInput = document.getElementById('dp');
-        if (dpInput) {
-            dpInput.addEventListener('input', function(e) {
-                let value = this.value.replace(/[^\d]/g, '');
-                if (value) {
-                    this.value = formatRupiah(value, 'Rp ');
-                } else {
-                    this.value = '';
-                }
-            });
-        }
+        // Tidak perlu event listener input untuk dp karena sekarang select
         creditSimulationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Get all field values
