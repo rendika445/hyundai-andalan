@@ -162,12 +162,16 @@ body {
 .caption-content {
     max-width: 600px;
     text-align: left;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
 }
 
 .car-model {
@@ -183,6 +187,7 @@ body {
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .car-tagline {
@@ -194,6 +199,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideInUp 1s ease 0.5s forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .car-description {
@@ -206,6 +212,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideInUp 1s ease 0.7s forwards;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 /* Modern Button Styling */
@@ -746,12 +753,12 @@ footer h5 {
     }
     
     .caption-content {
-        background: rgba(0, 0, 0, 0.85);
-        padding: 1.5rem;
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1.8rem;
+        border-radius: 12px;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .car-model {
@@ -1081,11 +1088,12 @@ footer h5 {
     }
     
     .caption-content {
-        background: rgba(0, 0, 0, 0.8);
-        padding: 1.5rem;
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     /* Mobile Text Readability */
