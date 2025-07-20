@@ -287,103 +287,11 @@ body {
 
 
 
-/* Modern Carousel Indicators */
-.carousel-indicators {
-    bottom: 3rem;
-    right: 2rem;
-    left: auto;
-    transform: none;
-    margin: 0;
-    width: auto;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    z-index: 15;
-}
 
-.carousel-indicators.right-position {
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    bottom: auto;
-    transform: translateY(-50%);
-    flex-direction: column;
-    gap: 15px;
-}
 
-.carousel-indicators button {
-    width: 50px;
-    height: 4px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border: none;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
 
-.carousel-indicators.right-position button {
-    width: 4px;
-    height: 50px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border: none;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
 
-.carousel-indicators button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: linear-gradient(90deg, #ffffff, #0d6efd);
-    transition: width 0.4s ease;
-}
 
-.carousel-indicators button:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    transform: scaleY(1.2);
-}
-
-.carousel-indicators button.active {
-    background-color: rgba(255, 255, 255, 0.8);
-    transform: scaleY(1.3);
-}
-
-.carousel-indicators.right-position button:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    transform: scaleX(1.2);
-}
-
-.carousel-indicators.right-position button.active {
-    background-color: rgba(255, 255, 255, 0.8);
-    transform: scaleX(1.3);
-}
-
-.carousel-indicators button.active::before {
-    width: 100%;
-}
-
-/* Alternative: Pill-shaped indicators */
-.carousel-indicators.pill-style button {
-    width: 60px;
-    height: 6px;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.carousel-indicators.pill-style button.active {
-    background: linear-gradient(90deg, #0d6efd, #0056b3);
-    border-color: #ffffff;
-    box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
-}
 
 
 
@@ -608,9 +516,6 @@ footer h5 {
     
     .carousel-caption {
         padding: 3rem 1.5rem 2rem;
-        background: linear-gradient(135deg, 
-            rgba(0, 0, 0, 0.9) 0%, 
-            rgba(0, 0, 0, 0.95) 100%);
     }
     
     .car-model {
@@ -642,25 +547,7 @@ footer h5 {
     }
     
     /* Tablet Carousel Indicators */
-    .carousel-indicators {
-        bottom: 1.5rem;
-        gap: 8px;
-    }
-    
-    .carousel-indicators button {
-        width: 40px;
-        height: 4px;
-    }
-    
-    .carousel-indicators.right-position {
-        right: 1.5rem;
-        gap: 12px;
-    }
-    
-    .carousel-indicators.right-position button {
-        width: 4px;
-        height: 40px;
-    }
+
     
     /* Tablet Navbar */
     .navbar-brand {
@@ -874,26 +761,7 @@ footer h5 {
         justify-content: center;
     }
     
-    /* Mobile Carousel Indicators */
-    .carousel-indicators {
-        bottom: 2rem;
-        gap: 8px;
-    }
-    
-    .carousel-indicators button {
-        width: 40px;
-        height: 4px;
-    }
-    
-    .carousel-indicators.right-position {
-        right: 1.5rem;
-        gap: 12px;
-    }
-    
-    .carousel-indicators.right-position button {
-        width: 4px;
-        height: 40px;
-    }
+
     
     /* Mobile Navbar */
     .navbar-brand {
@@ -958,10 +826,31 @@ footer h5 {
     
     /* Mobile Buttons */
     .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-        width: 100%;
-        margin-bottom: 0.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        border: none;
+        color: white;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+    }
+    
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+    }
+    
+    .btn-lg {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+        min-height: 56px;
     }
     
     .btn-group .btn {
@@ -1050,6 +939,41 @@ footer h5 {
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
+    }
+    
+    /* Mobile Scroll to Top Button */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 5rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+    
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .scroll-to-top:hover {
+        background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
     }
     
     /* Mobile Fullscreen Navbar */
@@ -1169,7 +1093,7 @@ footer h5 {
     }
     
     /* Mobile Touch Targets */
-    .btn, .nav-link, .carousel-indicators button {
+    .btn, .nav-link {
         min-height: 44px;
         min-width: 44px;
     }

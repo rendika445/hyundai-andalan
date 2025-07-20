@@ -242,6 +242,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Scroll to Top functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (scrollToTopBtn) {
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
     // Price formatting
     const priceElements = document.querySelectorAll('.text-primary.fw-bold');
     priceElements.forEach(element => {
