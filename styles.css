@@ -162,6 +162,12 @@ body {
 .caption-content {
     max-width: 600px;
     text-align: left;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .car-model {
@@ -739,6 +745,15 @@ footer h5 {
         transform: translateY(-50%);
     }
     
+    .caption-content {
+        background: rgba(0, 0, 0, 0.85);
+        padding: 1.5rem;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
     .car-model {
         font-size: clamp(2rem, 8vw, 2.5rem);
         margin-bottom: 0.5rem;
@@ -1059,9 +1074,18 @@ footer h5 {
     
     /* Mobile Content Visibility */
     .carousel-caption {
-        background: rgba(0, 0, 0, 0.7);
+        left: 5%;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .caption-content {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1.5rem;
         border-radius: 8px;
         backdrop-filter: blur(10px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     }
     
     /* Mobile Text Readability */
