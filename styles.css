@@ -24,14 +24,17 @@ body {
 .navbar-brand {
     color: var(--dark-color) !important;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .navbar-brand img {
+    height: 50px;
+    width: auto;
     transition: transform 0.3s ease;
 }
 
 .navbar-brand:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .nav-link {
@@ -280,131 +283,32 @@ body {
     color: #ffffff;
 }
 
-/* Enhanced Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 80px;
-    height: 80px;
-    opacity: 1;
-    transition: all 0.4s ease;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    backdrop-filter: blur(15px);
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    position: absolute;
-    overflow: hidden;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.carousel-control-prev {
-    left: 20px;
-}
 
-.carousel-control-next {
-    right: 20px;
-}
 
-.carousel-control-prev::before,
-.carousel-control-next::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(13, 110, 253, 0.8), rgba(0, 86, 179, 0.8));
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.carousel:hover .carousel-control-prev,
-.carousel:hover .carousel-control-next {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.05);
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.carousel-control-prev:hover::before,
-.carousel-control-next:hover::before {
-    opacity: 1;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
-    position: relative;
-    z-index: 2;
-    transition: transform 0.3s ease;
-    color: #ffffff !important;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-}
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-    transform: scale(1.1);
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50%;
-}
-
-/* Alternative: Pill-shaped controls */
-.carousel-control-prev.pill-style,
-.carousel-control-next.pill-style {
-    width: 120px;
-    height: 50px;
-    border-radius: 25px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    opacity: 1;
-    z-index: 10;
-    position: absolute;
-}
-
-.carousel-control-prev.pill-style::before,
-.carousel-control-next.pill-style::before {
-    border-radius: 25px;
-}
-
-.carousel-control-prev.pill-style .carousel-control-prev-icon,
-.carousel-control-next.pill-style .carousel-control-next-icon {
-    width: 2rem;
-    height: 2rem;
-    color: #ffffff;
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.9));
-}
 
 /* Modern Carousel Indicators */
 .carousel-indicators {
     bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 2rem;
+    left: auto;
+    transform: none;
     margin: 0;
     width: auto;
     display: flex;
     gap: 12px;
     align-items: center;
+    z-index: 15;
+}
+
+.carousel-indicators.right-position {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    bottom: auto;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 15px;
 }
 
 .carousel-indicators button {
@@ -416,6 +320,19 @@ body {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.carousel-indicators.right-position button {
+    width: 4px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .carousel-indicators button::before {
@@ -437,6 +354,16 @@ body {
 .carousel-indicators button.active {
     background-color: rgba(255, 255, 255, 0.8);
     transform: scaleY(1.3);
+}
+
+.carousel-indicators.right-position button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scaleX(1.2);
+}
+
+.carousel-indicators.right-position button.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scaleX(1.3);
 }
 
 .carousel-indicators button.active::before {
@@ -668,6 +595,7 @@ footer h5 {
 /* Responsive Design */
 /* Mobile-First Responsive Design */
 @media (max-width: 768px) {
+    /* Tablet Carousel */
     .carousel {
         height: 80vh;
         min-height: 600px;
@@ -685,77 +613,35 @@ footer h5 {
             rgba(0, 0, 0, 0.95) 100%);
     }
     
-    .carousel-caption h1 {
+    .car-model {
         font-size: clamp(2rem, 8vw, 2.8rem);
         margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
         gap: 1.5rem;
-        flex-wrap: wrap;
     }
     
-    .carousel-caption p {
+    .car-tagline {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 1.2rem;
+    }
+    
+    .car-description {
         font-size: clamp(1rem, 4vw, 1.2rem);
         margin-bottom: 1.5rem;
     }
     
-    .carousel-features {
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .feature-item {
-        font-size: clamp(0.8rem, 3vw, 1rem);
-    }
-    
     .carousel-actions {
         gap: 0.8rem;
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-        z-index: 10;
-        visibility: visible !important;
-        display: flex !important;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
     }
     
     .carousel-caption .btn {
         padding: 0.6rem 1.2rem;
         font-size: clamp(0.8rem, 2.5vw, 0.9rem);
         min-width: 100px;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: inline-flex !important;
-        z-index: 15;
     }
     
-        .carousel-control-prev,
-    .carousel-control-next {
-        width: 60px;
-        height: 60px;
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.6);
-        border: 2px solid rgba(255, 255, 255, 0.4);
-        z-index: 10;
-    }
-    
-    .carousel-control-prev {
-        left: 15px;
-    }
-    
-    .carousel-control-next {
-        right: 15px;
-    }
-    
-    .carousel-control-prev.pill-style,
-.carousel-control-next.pill-style {
-    width: 100px;
-    height: 40px;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    z-index: 10;
-}
-    
+    /* Tablet Carousel Indicators */
     .carousel-indicators {
         bottom: 1.5rem;
         gap: 8px;
@@ -766,13 +652,38 @@ footer h5 {
         height: 4px;
     }
     
-    .carousel-indicators.pill-style button {
-        width: 50px;
-        height: 5px;
+    .carousel-indicators.right-position {
+        right: 1.5rem;
+        gap: 12px;
     }
     
+    .carousel-indicators.right-position button {
+        width: 4px;
+        height: 40px;
+    }
+    
+    /* Tablet Navbar */
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    /* Tablet Typography */
+    .display-5 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+    }
+    
+    /* Tablet Cards */
     .feature-card {
         padding: 1.5rem;
+        margin-bottom: 1.5rem;
     }
     
     .vehicle-card .card-body {
@@ -782,114 +693,386 @@ footer h5 {
     .promotion-content {
         padding: 1rem;
     }
+    
+    /* Tablet Buttons */
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+    
+    /* Tablet Forms */
+    .form-control {
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+    
+    /* Tablet Spacing */
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    /* Tablet Sections */
+    section {
+        padding: 4rem 0;
+    }
+    
+    .py-5 {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+    
+    .py-4 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    /* Tablet Footer */
+    footer {
+        padding: 3rem 0;
+    }
+    
+    /* Tablet WhatsApp Float */
+    .whatsapp-float {
+        bottom: 2.5rem;
+        right: 2.5rem;
+    }
+    
+    .whatsapp-btn {
+        width: 65px;
+        height: 65px;
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 576px) {
+    /* Mobile Carousel */
     .carousel {
-        height: 70vh;
-        min-height: 500px;
+        height: 80vh;
+        min-height: 600px;
     }
     
     .carousel-item {
-        height: 70vh;
-        min-height: 500px;
+        height: 80vh;
+        min-height: 600px;
     }
     
     .carousel-caption {
-        padding: 2.5rem 1rem 1.5rem;
+        padding: 2rem 1rem;
+        left: 5%;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
-    .carousel-caption h1 {
-        font-size: clamp(1.8rem, 10vw, 2.2rem);
-        margin-bottom: 0.8rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-    
-    .carousel-caption p {
-        font-size: clamp(0.9rem, 5vw, 1.1rem);
-        margin-bottom: 1.2rem;
-    }
-    
-    .carousel-features {
+    .car-model {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        margin-bottom: 0.5rem;
         gap: 0.8rem;
-        margin-bottom: 1.2rem;
     }
     
-    .feature-item {
-        font-size: clamp(0.7rem, 4vw, 0.9rem);
+    .car-tagline {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 1rem;
+    }
+    
+    .car-description {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        margin-bottom: 1.5rem;
+        max-width: 100%;
     }
     
     .carousel-actions {
-        gap: 0.6rem;
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-        z-index: 10;
-        visibility: visible !important;
-        display: flex !important;
-        justify-content: flex-start;
+        gap: 0.8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
     }
     
     .carousel-caption .btn {
-        padding: 0.5rem 1rem;
-        font-size: clamp(0.7rem, 3.5vw, 0.8rem);
-        min-width: 80px;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: inline-flex !important;
-        z-index: 15;
+        padding: 0.8rem 1.5rem;
+        font-size: clamp(0.8rem, 4vw, 1rem);
+        min-width: 120px;
+        width: auto;
+        justify-content: center;
     }
     
-        .carousel-control-prev,
-    .carousel-control-next {
-        width: 50px;
-        height: 50px;
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.7);
-        border: 2px solid rgba(255, 255, 255, 0.5);
-        z-index: 10;
-    }
-    
-    .carousel-control-prev {
-        left: 10px;
-    }
-    
-    .carousel-control-next {
-        right: 10px;
-    }
-    
-    .carousel-control-prev.pill-style,
-.carousel-control-next.pill-style {
-    width: 80px;
-    height: 35px;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    z-index: 10;
-}
-    
+    /* Mobile Carousel Indicators */
     .carousel-indicators {
-        bottom: 1rem;
-        gap: 6px;
+        bottom: 2rem;
+        gap: 8px;
     }
     
     .carousel-indicators button {
-        width: 35px;
-        height: 3px;
-    }
-    
-    .carousel-indicators.pill-style button {
-        width: 45px;
+        width: 40px;
         height: 4px;
     }
     
+    .carousel-indicators.right-position {
+        right: 1.5rem;
+        gap: 12px;
+    }
+    
+    .carousel-indicators.right-position button {
+        width: 4px;
+        height: 40px;
+    }
+    
+    /* Mobile Navbar */
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.8rem 0;
+        font-size: 1rem;
+    }
+    
+    /* Mobile Typography */
     .display-5 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .lead {
+        font-size: 1.1rem;
+    }
+    
+    h1, .h1 {
+        font-size: 2rem;
+    }
+    
+    h2, .h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Mobile Cards */
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .vehicle-card {
+        margin-bottom: 2rem;
+    }
+    
+    .vehicle-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .vehicle-card .card-header {
+        padding: 1rem 1.5rem;
+    }
+    
+    /* Mobile Buttons */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .btn-group .btn {
+        width: auto;
+        margin-bottom: 0;
+    }
+    
+    /* Mobile Forms */
+    .form-control {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .form-label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Mobile Spacing */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    
+    .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    /* Mobile Sections */
+    section {
+        padding: 3rem 0;
+    }
+    
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .py-4 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    
+    /* Mobile Footer */
+    footer {
+        padding: 2rem 0;
+    }
+    
+    footer .col-md-4 {
+        margin-bottom: 2rem;
+    }
+    
+    /* Mobile Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Mobile Tables */
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    /* Mobile Modals */
+    .modal-dialog {
+        margin: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    /* Mobile WhatsApp Float */
+    .whatsapp-float {
+        bottom: 2rem;
+        right: 2rem;
+    }
+    
+    .whatsapp-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    /* Mobile Additional Improvements */
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    
+    /* Mobile Content Visibility */
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+    }
+    
+    /* Mobile Text Readability */
+    .car-model, .car-tagline, .car-description {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Mobile Touch Targets */
+    .btn, .nav-link, .carousel-indicators button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Mobile Scroll Improvements */
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Mobile Image Optimization */
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /* Mobile Table Responsive */
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    .table td, .table th {
+        padding: 0.5rem;
+    }
+    
+    /* Mobile Form Improvements */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-check {
+        margin-bottom: 1rem;
+    }
+    
+    /* Mobile Alert Improvements */
+    .alert {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    
+    /* Mobile Badge Improvements */
+    .badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    /* Mobile Progress Bar */
+    .progress {
+        height: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Mobile List Group */
+    .list-group-item {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Mobile Pagination */
+    .pagination {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .page-link {
+        padding: 0.8rem 1rem;
         font-size: 1rem;
     }
 }
@@ -897,6 +1080,70 @@ footer h5 {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Accessibility Improvements */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Focus styles for better accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #0d6efd;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* SEO and Performance Optimizations */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Print styles */
+@media print {
+    .carousel,
+    .whatsapp-float,
+    .navbar {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
 }
 
 /* Loading Animation */

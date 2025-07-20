@@ -1,0 +1,31 @@
+{
+    "name": "Hyundai Andalan Jakarta",
+    "short_name": "Hyundai Andalan",
+    "description": "Dealer Resmi Hyundai Andalan Jakarta - Promo & Harga Mobil Hyundai Terbaru",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0d6efd",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "images/hyundai-icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/andalan-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/andalan-logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["business", "automotive"],
+    "lang": "id",
+    "dir": "ltr"
+} 
