@@ -375,31 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lazyImages.forEach(img => imageObserver.observe(img));
     }
 
-    // Add a "Back to Top" button
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-    backToTopButton.className = 'btn btn-primary position-fixed';
-    backToTopButton.style.cssText = 'bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px; display: none;';
-    backToTopButton.setAttribute('aria-label', 'Back to top');
-    
-    document.body.appendChild(backToTopButton);
 
-    // Show/hide back to top button
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    });
-
-    // Back to top functionality
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
 
     // Show Produk dropdown on hover/focus
     const produkDropdown = document.getElementById('produkDropdown');
