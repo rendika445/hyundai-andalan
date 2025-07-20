@@ -36,74 +36,77 @@
     </nav>
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="carousel-indicators pill-style">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Hyundai Palisade"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Hyundai Creta"></button>
             </div>
             <div class="carousel-inner">
+                <!-- Hyundai Palisade -->
                 <div class="carousel-item active">
-                    <img src="images/banner-palisade.jpg" class="d-block w-100" alt="Hyundai Palisade - SUV Premium Hybrid">
+                    <div class="carousel-background">
+                        <video class="carousel-video" autoplay muted loop playsinline>
+                            <source src="images/The all-new PALISADE Hybrid.mp4" type="video/mp4">
+                            <img src="images/banner-palisade.jpg" alt="Hyundai Palisade - SUV Premium Hybrid">
+                        </video>
+                        <div class="carousel-overlay"></div>
+                    </div>
                     <div class="carousel-caption">
-                        <h1>The All-New PALISADE Hybrid</h1>
-                        <p>SUV Premium dengan teknologi hybrid terdepan dan kenyamanan maksimal</p>
-                        <a href="palisade.html" class="btn btn-primary btn-lg">Lihat Detail</a>
+                        <div class="caption-content">
+                            <h1 class="car-model">
+                                PALISADE
+                                <a href="palisade.html" class="btn btn-outline-light btn-lg">
+                                    Lihat Detail
+                                    <span class="btn-icon">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </h1>
+                            <h2 class="car-tagline">SUV Premium Hybrid Terbaru</h2>
+                            <p class="car-description">Rasakan kemewahan yang didefinisikan ulang dengan Palisade Hybrid terbaru. Menggabungkan teknologi hybrid terkini dengan kenyamanan yang tak tertandingi, SUV premium ini menghadirkan keseimbangan sempurna antara tenaga, efisiensi, dan kecanggihan untuk keluarga modern.</p>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Hyundai Creta -->
                 <div class="carousel-item">
-                    <img src="images/banner-hyundai-creta.jpg" class="d-block w-100" alt="Hyundai Creta - SUV Compact Modern">
-                    <div class="carousel-caption">
-                        <h1>New CRETA</h1>
-                        <p>SUV Compact dengan desain modern dan performa tangguh untuk keluarga</p>
-                        <a href="creta.html" class="btn btn-primary btn-lg">Lihat Detail</a>
+                    <div class="carousel-background">
+                        <video class="carousel-video" autoplay muted loop playsinline>
+                            <source src="images/The New CRETA.mp4" type="video/mp4">
+                            <img src="images/banner-hyundai-creta.jpg" alt="Hyundai Creta - SUV Compact Modern">
+                        </video>
+                        <div class="carousel-overlay"></div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/banner-hyundai-kona.jpg" class="d-block w-100" alt="Hyundai Kona - SUV Electric Futuristik">
                     <div class="carousel-caption">
-                        <h1>The All-New KONA Electric</h1>
-                        <p>SUV Electric dengan teknologi masa depan dan efisiensi tinggi</p>
-                        <a href="kona.html" class="btn btn-primary btn-lg">Lihat Detail</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/banner-ioniq-5.jpg" class="d-block w-100" alt="Hyundai IONIQ 5 - Electric Vehicle Futuristik">
-                    <div class="carousel-caption">
-                        <h1>IONIQ 5</h1>
-                        <p>Electric Vehicle dengan desain futuristik dan teknologi terkini</p>
-                        <a href="ioniq5.html" class="btn btn-primary btn-lg">Lihat Detail</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/banner-hyundai-santa-fe.jpg" class="d-block w-100" alt="Hyundai Santa Fe - SUV Premium Mewah">
-                    <div class="carousel-caption">
-                        <h1>The All-New SANTA FE</h1>
-                        <p>SUV Premium dengan kenyamanan maksimal dan teknologi canggih</p>
-                        <a href="santafe.html" class="btn btn-primary btn-lg">Lihat Detail</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/banner-stargazer-x.jpg" class="d-block w-100" alt="Hyundai Stargazer X - MPV Premium">
-                    <div class="carousel-caption">
-                        <h1>STARGAZER X</h1>
-                        <p>MPV Premium dengan teknologi terkini dan kenyamanan keluarga</p>
-                        <a href="stargazerx.html" class="btn btn-primary btn-lg">Lihat Detail</a>
+                        <div class="caption-content">
+                            <h1 class="car-model">
+                                CRETA
+                                <a href="creta.html" class="btn btn-outline-light btn-lg">
+                                    Lihat Detail
+                                    <span class="btn-icon">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </h1>
+                            <h2 class="car-tagline">Generasi Baru</h2>
+                            <p class="car-description">Temukan Creta terbaru dengan desain yang berani dan teknologi canggih. SUV compact ini menawarkan perpaduan sempurna antara gaya, performa, dan kepraktisan untuk gaya hidup urban modern.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            
+            <!-- Enhanced Controls -->
+            <button class="carousel-control-prev pill-style" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <button class="carousel-control-next pill-style" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        
+
     </section>
     <!-- Features Section -->
     <section class="py-4 bg-light">
