@@ -156,6 +156,66 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Mobile Fullscreen Navbar
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const body = document.body;
+
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                // Closing navbar
+                body.classList.remove('navbar-open');
+                setTimeout(() => {
+                    navbarCollapse.classList.remove('show');
+                }, 300);
+            } else {
+                // Opening navbar
+                body.classList.add('navbar-open');
+                navbarCollapse.classList.add('show');
+            }
+        });
+
+        // Close navbar when clicking on nav links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                body.classList.remove('navbar-open');
+                setTimeout(() => {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.classList.add('collapsed');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }, 300);
+            });
+        });
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navbar.contains(e.target) && navbarCollapse.classList.contains('show')) {
+                body.classList.remove('navbar-open');
+                setTimeout(() => {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.classList.add('collapsed');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }, 300);
+            }
+        });
+
+        // Close navbar on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+                body.classList.remove('navbar-open');
+                setTimeout(() => {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.classList.add('collapsed');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }, 300);
+            }
+        });
+    }
+
     // Vehicle modal enhancements
     const vehicleModals = document.querySelectorAll('[id^="vehicleModal"]');
     vehicleModals.forEach(modal => {
