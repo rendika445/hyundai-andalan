@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Compose WhatsApp message
             const waNumber = '6281992657639';
             const message =
+                `Halo Ahmad Riffai Zarkasih, saya ingin mengetahui lebih lanjut tentang mobil Hyundai, mohon dibantu.\n\n` +
                 `*Simulasi Kredit Hyundai*\n` +
                 `Nama: ${nama}\n` +
                 `No HP: ${nohp}\n` +
