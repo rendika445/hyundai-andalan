@@ -123,6 +123,19 @@ body {
     display: none !important;
 }
 
+/* Fallback image for video loading */
+.fallback-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel-video:not([src]) .fallback-image,
+.carousel-video[poster] .fallback-image {
+    display: block;
+}
+
 .carousel-overlay {
     position: absolute;
     top: 0;

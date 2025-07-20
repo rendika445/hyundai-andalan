@@ -68,6 +68,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="images/hyundai-logo.png" as="image">
+    <link rel="preload" href="images/palisade-compressed.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="images/creta-compressed.mp4" as="video" type="video/mp4">
     
     <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -149,8 +151,9 @@
                     <!-- Hyundai Palisade -->
                     <article class="carousel-item active" role="tabpanel" aria-label="Hyundai Palisade - SUV Premium Hybrid">
                         <div class="carousel-background">
-                            <video class="carousel-video" autoplay muted loop playsinline poster="images/banner-palisade.jpg" aria-label="Hyundai Palisade Hybrid video">
-                                <source src="images/The all-new PALISADE Hybrid.mp4" type="video/mp4">
+                            <video class="carousel-video" autoplay muted loop playsinline poster="images/palisade.jpeg" preload="metadata" aria-label="Hyundai Palisade Hybrid video">
+                                <source src="images/palisade-compressed.mp4" type="video/mp4">
+                                <img src="images/palisade.jpeg" alt="Hyundai Palisade Hybrid" class="fallback-image">
                             </video>
                             <div class="carousel-overlay" aria-hidden="true"></div>
                         </div>
@@ -174,8 +177,9 @@
                     <!-- Hyundai Creta -->
                     <article class="carousel-item" role="tabpanel" aria-label="Hyundai Creta - SUV Compact Modern">
                         <div class="carousel-background">
-                            <video class="carousel-video" autoplay muted loop playsinline poster="images/banner-hyundai-creta.jpg" aria-label="Hyundai Creta video">
-                                <source src="images/The New CRETA.mp4" type="video/mp4">
+                            <video class="carousel-video" autoplay muted loop playsinline poster="images/creta.jpeg" preload="metadata" aria-label="Hyundai Creta video">
+                                <source src="images/creta-compressed.mp4" type="video/mp4">
+                                <img src="images/creta.jpeg" alt="Hyundai Creta" class="fallback-image">
                             </video>
                             <div class="carousel-overlay" aria-hidden="true"></div>
                         </div>
@@ -436,7 +440,6 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

@@ -266,6 +266,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Video loading optimization
+    const videos = document.querySelectorAll('.carousel-video');
+    videos.forEach(video => {
+        // Show poster image while video loads
+        video.addEventListener('loadstart', function() {
+            this.style.opacity = '0.5';
+        });
+        
+        // Show video when it's ready to play
+        video.addEventListener('canplay', function() {
+            this.style.opacity = '1';
+            this.style.transition = 'opacity 0.5s ease';
+        });
+        
+        // Handle video loading errors
+        video.addEventListener('error', function() {
+            console.log('Video failed to load, showing fallback image');
+            const fallback = this.querySelector('.fallback-image');
+            if (fallback) {
+                fallback.style.display = 'block';
+            }
+        });
+    });
+
     // Add loading animation to images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
