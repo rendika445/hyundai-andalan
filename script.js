@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Compose WhatsApp message
-            const waNumber = '6285959178305';
+            const waNumber = '6281992657639';
             const message =
                 `*Simulasi Kredit Hyundai*\n` +
                 `Nama: ${nama}\n` +
