@@ -530,6 +530,26 @@ html {
   font-size: 1.5rem;
 }
 
+/* Price Variant Styles */
+.price-variant {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.price-variant:last-child {
+  border-bottom: none;
+}
+
+.price-variant h6 {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.price-variant .price-tag {
+  font-size: 1rem !important;
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .price-item {
     margin-bottom: 1rem;
@@ -541,5 +561,13 @@ html {
   
   .card-header h3 {
     font-size: 1.3rem;
+  }
+  
+  .price-variant h6 {
+    font-size: 0.85rem;
+  }
+  
+  .price-variant .price-tag {
+    font-size: 0.9rem !important;
   }
 } 
